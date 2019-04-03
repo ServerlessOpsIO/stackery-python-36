@@ -13,13 +13,20 @@ Here is an overview of the files:
 
 ```bash
 .
-├── README.md                   <-- This README file
-├── src                         <-- Source code dir for all AWS Lambda functions
-│   └── getWelcomePage          <-- Source code dir for getWelcomePage function
-│       ├── README.md           <-- Function specific README
-│       ├── handler.py          <-- Lambda function code
-│       ├── requirements.txt    <-- Python pip dependencies
-│       └── welcome.html        <-- HTML welcome page returned by Lambda function
-└── template.yaml               <-- SAM infrastructure-as-code template
+├── README.md                       <-- This README file
+├── src                             <-- Source code dir for all AWS Lambda functions
+│   └── Action                      <-- Source code dir for Action function
+│   │   ├── events/                 <-- Sample events directory
+│   │   │   ├── event.json          <-- Sample event
+│   │   │   └── event-schema.json   <-- Sample event schema
+│   │   ├── tests/                  <-- Python tests directory
+│   │   │   └── __init__.py         <-- Python tests entry
+│   │   ├── README.md               <-- Function specific README
+│   │   ├── handler.py              <-- Lambda function code
+│   │   ├── requirements.txt        <-- Python pip dependencies
+│   │   └── requirements-dev.txt    <-- Python pip dev dependencies
+│   └── common                      <-- common code
+│       └── __init__.py             <-- Python code entry
+└── template.yaml                   <-- SAM infrastructure-as-code template
 ```
 
